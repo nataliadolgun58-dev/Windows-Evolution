@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Порівняння — Windows Evolution</title>
+
+    <!-- Піксельні шрифти підключені локально в css/style.css -->
+
+    <!-- Стилі -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+
+<body>
+
+<div class="scanlines"></div>
+
+<div class="app">
+
+    <!-- =================================
+         БОКОВЕ МЕНЮ
+    ================================== -->
+
+    <aside class="sidebar">
+
+        <a href="index.html" class="brand">
+
+            <div class="brand-icon">
+                W<span>.</span>
+            </div>
+
+            <div class="brand-text">
+                <span>WINDOWS</span>
+                <strong>EVOLUTION</strong>
+            </div>
+
+        </a>
+
+
+        <div class="sidebar-label">
+            <span class="pixel-square"></span>
+            MAIN MENU
+        </div>
+
+
+        <nav class="navigation">
+
+            <a href="index.html" class="nav-item">
+                <span class="nav-icon">⌂</span>
+                <span>Головна</span>
+                <span class="nav-marker"></span>
+            </a>
+
+            <a href="catalog.html" class="nav-item">
+                <span class="nav-icon">▦</span>
+                <span>Каталог Windows</span>
+            </a>
+
+            <a href="compare.html" class="nav-item active">
+                <span class="nav-icon">⇄</span>
+                <span>Порівняння</span>
+            </a>
+
+            <a href="timeline.html" class="nav-item">
+                <span class="nav-icon">◷</span>
+                <span>Історія Windows</span>
+            </a>
+
+            <a href="knowledge.html" class="nav-item">
+                <span class="nav-icon">▤</span>
+                <span>Енциклопедія</span>
+            </a>
+
+            <a href="features.html" class="nav-item">
+                <span class="nav-icon">▧</span>
+                <span>Матриця функцій</span>
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-label tools-label">
+            <span class="pixel-square purple-square"></span>
+            SYSTEM TOOLS
+        </div>
+
+
+        <nav class="navigation">
+
+            <a href="analytics.html" class="nav-item">
+                <span class="nav-icon">▥</span>
+                <span>Аналітика</span>
+            </a>
+
+            <a href="import.html" class="nav-item">
+                <span class="nav-icon">⇧</span>
+                <span>Імпорт даних</span>
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <a href="about.html" class="nav-item">
+                <span class="nav-icon">ⓘ</span>
+                <span>Про проєкт</span>
+            </a>
+
+            <div class="sidebar-version">
+
+                <div class="online-indicator"></div>
+
+                <span>WINDOWS EVOLUTION</span>
+
+                <span class="version">V1.0</span>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =================================
+         ОСНОВНИЙ КОНТЕНТ
+    ================================== -->
+
+    <main class="main-content">
+
+
+        <!-- Верхня панель -->
+
+        <header class="topbar">
+
+            <div class="breadcrumbs">
+                <span>WINDOWS EVOLUTION</span>
+                <span class="breadcrumb-symbol">/</span>
+                <a href="catalog.html">КАТАЛОГ</a>
+                <span class="breadcrumb-symbol">/</span>
+                <strong>ПОРІВНЯННЯ</strong>
+            </div>
+
+            <div class="system-status">
+
+                <span class="online-indicator"></span>
+
+                SYSTEM ONLINE
+
+            </div>
+
+        </header>
+
+
+        <div class="page-content">
+
+            <div class="page-head">
+                <span class="eyebrow">SYSTEM ANALYSIS</span>
+                <h1 class="page-title">ПОРІВНЯННЯ WINDOWS</h1>
+                <p class="page-lead">Обери від 2 до 4 версій. Відмінності підсвічуються, а результат можна завантажити у PDF або XLSX.</p>
+            </div>
+
+            <div class="toolbar">
+                <label class="field field-search">
+                    <span>ДОДАТИ ВЕРСІЮ</span>
+                    <select id="add"></select>
+                </label>
+                <button id="addBtn" class="px-btn" type="button">+ ДОДАТИ</button>
+                <button id="clear" class="px-btn px-btn-ghost" type="button">ОЧИСТИТИ</button>
+            </div>
+
+            <div id="chips" class="chips" aria-live="polite"></div>
+
+            <div id="actions" class="toolbar toolbar-actions" hidden>
+                <label class="check"><input type="checkbox" id="onlyDiff"><span>Лише відмінності</span></label>
+                <span class="spacer"></span>
+                <button id="pdf" class="px-btn" type="button">⬇ ЗАВАНТАЖИТИ PDF</button>
+                <button id="xlsx" class="px-btn" type="button">⬇ ЗАВАНТАЖИТИ XLSX</button>
+            </div>
+
+            <div id="message" class="os-message" hidden></div>
+            <div id="result" class="cmp-wrap"></div>
+
+        </div>
+    </main>
+</div>
+
+<script src="js/main.js"></script>
+<script src="js/compare.js"></script>
+</body>
+</html>

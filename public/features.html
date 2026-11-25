@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Можливості — Windows Evolution</title>
+
+    <!-- Піксельні шрифти підключені локально в css/style.css -->
+
+    <!-- Стилі -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+
+<body>
+
+<div class="scanlines"></div>
+
+<div class="app">
+
+    <!-- =================================
+         БОКОВЕ МЕНЮ
+    ================================== -->
+
+    <aside class="sidebar">
+
+        <a href="index.html" class="brand">
+
+            <div class="brand-icon">
+                W<span>.</span>
+            </div>
+
+            <div class="brand-text">
+                <span>WINDOWS</span>
+                <strong>EVOLUTION</strong>
+            </div>
+
+        </a>
+
+
+        <div class="sidebar-label">
+            <span class="pixel-square"></span>
+            MAIN MENU
+        </div>
+
+
+        <nav class="navigation">
+
+            <a href="index.html" class="nav-item">
+                <span class="nav-icon">⌂</span>
+                <span>Головна</span>
+                <span class="nav-marker"></span>
+            </a>
+
+            <a href="catalog.html" class="nav-item">
+                <span class="nav-icon">▦</span>
+                <span>Каталог Windows</span>
+            </a>
+
+            <a href="compare.html" class="nav-item">
+                <span class="nav-icon">⇄</span>
+                <span>Порівняння</span>
+            </a>
+
+            <a href="timeline.html" class="nav-item">
+                <span class="nav-icon">◷</span>
+                <span>Історія Windows</span>
+            </a>
+
+            <a href="knowledge.html" class="nav-item">
+                <span class="nav-icon">▤</span>
+                <span>Енциклопедія</span>
+            </a>
+
+            <a href="features.html" class="nav-item active">
+                <span class="nav-icon">▧</span>
+                <span>Матриця функцій</span>
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-label tools-label">
+            <span class="pixel-square purple-square"></span>
+            SYSTEM TOOLS
+        </div>
+
+
+        <nav class="navigation">
+
+            <a href="analytics.html" class="nav-item">
+                <span class="nav-icon">▥</span>
+                <span>Аналітика</span>
+            </a>
+
+            <a href="import.html" class="nav-item">
+                <span class="nav-icon">⇧</span>
+                <span>Імпорт даних</span>
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <a href="about.html" class="nav-item">
+                <span class="nav-icon">ⓘ</span>
+                <span>Про проєкт</span>
+            </a>
+
+            <div class="sidebar-version">
+
+                <div class="online-indicator"></div>
+
+                <span>WINDOWS EVOLUTION</span>
+
+                <span class="version">V1.0</span>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =================================
+         ОСНОВНИЙ КОНТЕНТ
+    ================================== -->
+
+    <main class="main-content">
+
+
+        <!-- Верхня панель -->
+
+        <header class="topbar">
+
+            <div class="breadcrumbs">
+                <span>WINDOWS EVOLUTION</span>
+                <span class="breadcrumb-symbol">/</span>
+                <a href="catalog.html">КАТАЛОГ</a>
+                <span class="breadcrumb-symbol">/</span>
+                <strong>МОЖЛИВОСТІ</strong>
+            </div>
+
+            <div class="system-status">
+
+                <span class="online-indicator"></span>
+
+                SYSTEM ONLINE
+
+            </div>
+
+        </header>
+
+
+        <div class="page-content">
+
+            <div class="page-head">
+                <span class="eyebrow">FEATURE MATRIX</span>
+                <h1 class="page-title">МАТРИЦЯ МОЖЛИВОСТЕЙ</h1>
+                <p class="page-lead">Яка функція зʼявилась у якій версії Windows. Натисни назву функції, щоб побачити подробиці, або назву версії, щоб відкрити її картку.</p>
+            </div>
+
+            <div class="toolbar">
+                <label class="field field-search"><span>ПОШУК ФУНКЦІЇ</span>
+                    <input id="q" type="search" maxlength="60" placeholder="Наприклад: NTFS, UAC, Wi-Fi…" autocomplete="off"></label>
+                <label class="field"><span>КАТЕГОРІЯ</span><select id="cat"><option value="">Усі</option></select></label>
+                <label class="field"><span>ПІДСВІТИТИ ВЕРСІЮ</span><select id="focus"><option value="">—</option></select></label>
+                <button id="reset" class="px-btn px-btn-ghost" type="button">СКИНУТИ</button>
+            </div>
+
+            <div id="count" class="result-count" aria-live="polite">Завантаження…</div>
+            <div id="message" class="os-message" hidden></div>
+            <div id="detail" class="panel feat-detail" hidden></div>
+            <div id="matrix" class="cmp-wrap"></div>
+            <p class="note">Матриця показує, з якої основної версії функція стала доступною. Деякі функції (BitLocker, RDP-сервер, Hyper-V, вхід у домен) доступні лише в окремих редакціях.</p>
+
+        </div>
+    </main>
+</div>
+
+<script src="js/main.js"></script>
+<script src="js/features.js"></script>
+</body>
+</html>

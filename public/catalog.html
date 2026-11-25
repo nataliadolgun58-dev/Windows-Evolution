@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Каталог Windows — Windows Evolution</title>
+
+    <!-- Піксельні шрифти підключені локально в css/style.css -->
+
+    <!-- Стилі -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+
+<body>
+
+<div class="scanlines"></div>
+
+<div class="app">
+
+    <!-- =================================
+         БОКОВЕ МЕНЮ
+    ================================== -->
+
+    <aside class="sidebar">
+
+        <a href="index.html" class="brand">
+
+            <div class="brand-icon">
+                W<span>.</span>
+            </div>
+
+            <div class="brand-text">
+                <span>WINDOWS</span>
+                <strong>EVOLUTION</strong>
+            </div>
+
+        </a>
+
+
+        <div class="sidebar-label">
+            <span class="pixel-square"></span>
+            MAIN MENU
+        </div>
+
+
+        <nav class="navigation">
+
+            <a href="index.html" class="nav-item">
+                <span class="nav-icon">⌂</span>
+                <span>Головна</span>
+                <span class="nav-marker"></span>
+            </a>
+
+            <a href="catalog.html" class="nav-item active">
+                <span class="nav-icon">▦</span>
+                <span>Каталог Windows</span>
+            </a>
+
+            <a href="compare.html" class="nav-item">
+                <span class="nav-icon">⇄</span>
+                <span>Порівняння</span>
+            </a>
+
+            <a href="timeline.html" class="nav-item">
+                <span class="nav-icon">◷</span>
+                <span>Історія Windows</span>
+            </a>
+
+            <a href="knowledge.html" class="nav-item">
+                <span class="nav-icon">▤</span>
+                <span>Енциклопедія</span>
+            </a>
+
+            <a href="features.html" class="nav-item">
+                <span class="nav-icon">▧</span>
+                <span>Матриця функцій</span>
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-label tools-label">
+            <span class="pixel-square purple-square"></span>
+            SYSTEM TOOLS
+        </div>
+
+
+        <nav class="navigation">
+
+            <a href="analytics.html" class="nav-item">
+                <span class="nav-icon">▥</span>
+                <span>Аналітика</span>
+            </a>
+
+            <a href="import.html" class="nav-item">
+                <span class="nav-icon">⇧</span>
+                <span>Імпорт даних</span>
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <a href="about.html" class="nav-item">
+                <span class="nav-icon">ⓘ</span>
+                <span>Про проєкт</span>
+            </a>
+
+            <div class="sidebar-version">
+
+                <div class="online-indicator"></div>
+
+                <span>WINDOWS EVOLUTION</span>
+
+                <span class="version">V1.0</span>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =================================
+         ОСНОВНИЙ КОНТЕНТ
+    ================================== -->
+
+    <main class="main-content">
+
+
+        <!-- Верхня панель -->
+
+        <header class="topbar">
+
+            <div class="breadcrumbs">
+                <span>WINDOWS EVOLUTION</span>
+                <span class="breadcrumb-symbol">/</span>
+                <strong>КАТАЛОГ</strong>
+            </div>
+
+            <div class="system-status">
+
+                <span class="online-indicator"></span>
+
+                SYSTEM ONLINE
+
+            </div>
+
+        </header>
+
+
+        <div class="page-content">
+
+            <div class="page-head">
+                <span class="eyebrow">SYSTEM DATABASE</span>
+                <h1 class="page-title">КАТАЛОГ WINDOWS</h1>
+                <p class="page-lead">Усі версії з бази даних. Шукай, фільтруй, сортуй і відкривай детальну картку.</p>
+            </div>
+
+            <div class="toolbar">
+                <label class="field field-search">
+                    <span>ПОШУК</span>
+                    <input id="q" type="search" maxlength="100" placeholder="Назва, версія, збірка…" autocomplete="off">
+                </label>
+                <label class="field">
+                    <span>ТИП</span>
+                    <select id="category">
+                        <option value="">Усі типи</option>
+                        <option value="desktop">Настільні ПК</option>
+                        <option value="server">Серверні</option>
+                        <option value="device">Пристрої (телефони, планшети)</option>
+                        <option value="beta">Бета-версії</option>
+                    </select>
+                </label>
+                <label class="field">
+                    <span>ЛІНІЯ</span>
+                    <select id="line">
+                        <option value="">Усі</option>
+                        <option value="DOS">На основі MS-DOS</option>
+                        <option value="NT">Лінія NT</option>
+                        <option value="CE">Windows CE</option>
+                    </select>
+                </label>
+                <label class="field">
+                    <span>ПІДТРИМКА</span>
+                    <select id="status">
+                        <option value="">Усі</option>
+                        <option value="supported">Підтримується</option>
+                        <option value="ended">Завершена</option>
+                    </select>
+                </label>
+                <label class="field">
+                    <span>СОРТУВАННЯ</span>
+                    <select id="sort">
+                        <option value="date">За датою виходу</option>
+                        <option value="name">За назвою</option>
+                        <option value="ram">За RAM</option>
+                        <option value="disk">За диском</option>
+                        <option value="cpu">За процесором</option>
+                    </select>
+                </label>
+                <button id="order" class="px-btn" type="button" aria-label="Напрям сортування">▲ ЗА ЗРОСТАННЯМ</button>
+                <button id="reset" class="px-btn px-btn-ghost" type="button">СКИНУТИ</button>
+            </div>
+
+            <div id="count" class="result-count" aria-live="polite">Завантаження…</div>
+            <div id="grid" class="os-grid"></div>
+            <div id="message" class="os-message" hidden></div>
+
+        </div>
+    </main>
+</div>
+
+<script src="js/main.js"></script>
+<script src="js/images.js"></script>
+<script src="js/catalog.js"></script>
+</body>
+</html>

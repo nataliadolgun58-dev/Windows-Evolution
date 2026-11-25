@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Про проєкт — Windows Evolution</title>
+
+    <!-- Піксельні шрифти підключені локально в css/style.css -->
+
+    <!-- Стилі -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+
+<body>
+
+<div class="scanlines"></div>
+
+<div class="app">
+
+    <!-- =================================
+         БОКОВЕ МЕНЮ
+    ================================== -->
+
+    <aside class="sidebar">
+
+        <a href="index.html" class="brand">
+
+            <div class="brand-icon">
+                W<span>.</span>
+            </div>
+
+            <div class="brand-text">
+                <span>WINDOWS</span>
+                <strong>EVOLUTION</strong>
+            </div>
+
+        </a>
+
+
+        <div class="sidebar-label">
+            <span class="pixel-square"></span>
+            MAIN MENU
+        </div>
+
+
+        <nav class="navigation">
+
+            <a href="index.html" class="nav-item">
+                <span class="nav-icon">⌂</span>
+                <span>Головна</span>
+                <span class="nav-marker"></span>
+            </a>
+
+            <a href="catalog.html" class="nav-item">
+                <span class="nav-icon">▦</span>
+                <span>Каталог Windows</span>
+            </a>
+
+            <a href="compare.html" class="nav-item">
+                <span class="nav-icon">⇄</span>
+                <span>Порівняння</span>
+            </a>
+
+            <a href="timeline.html" class="nav-item">
+                <span class="nav-icon">◷</span>
+                <span>Історія Windows</span>
+            </a>
+
+            <a href="knowledge.html" class="nav-item">
+                <span class="nav-icon">▤</span>
+                <span>Енциклопедія</span>
+            </a>
+
+            <a href="features.html" class="nav-item">
+                <span class="nav-icon">▧</span>
+                <span>Матриця функцій</span>
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-label tools-label">
+            <span class="pixel-square purple-square"></span>
+            SYSTEM TOOLS
+        </div>
+
+
+        <nav class="navigation">
+
+            <a href="analytics.html" class="nav-item">
+                <span class="nav-icon">▥</span>
+                <span>Аналітика</span>
+            </a>
+
+            <a href="import.html" class="nav-item">
+                <span class="nav-icon">⇧</span>
+                <span>Імпорт даних</span>
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <a href="about.html" class="nav-item active">
+                <span class="nav-icon">ⓘ</span>
+                <span>Про проєкт</span>
+            </a>
+
+            <div class="sidebar-version">
+
+                <div class="online-indicator"></div>
+
+                <span>WINDOWS EVOLUTION</span>
+
+                <span class="version">V1.0</span>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =================================
+         ОСНОВНИЙ КОНТЕНТ
+    ================================== -->
+
+    <main class="main-content">
+
+
+        <!-- Верхня панель -->
+
+        <header class="topbar">
+
+            <div class="breadcrumbs">
+                <span>WINDOWS EVOLUTION</span>
+                <span class="breadcrumb-symbol">/</span>
+                <a href="catalog.html">КАТАЛОГ</a>
+                <span class="breadcrumb-symbol">/</span>
+                <strong>ПРО ПРОЄКТ</strong>
+            </div>
+
+            <div class="system-status">
+
+                <span class="online-indicator"></span>
+
+                SYSTEM ONLINE
+
+            </div>
+
+        </header>
+
+
+        <div class="page-content">
+
+            <div class="page-head">
+                <span class="eyebrow">ABOUT THE PROJECT</span>
+                <h1 class="page-title">ПРО ПРОЄКТ</h1>
+                <p class="page-lead">Windows Evolution — інтерактивна платформа про історію й характеристики операційних систем Windows, також з можливітю порівнювати ОС.</p>
+            </div>
+
+            <div id="kpis" class="kpis"></div>
+
+            <div class="detail-cols">
+                <section class="panel"><h3 class="panel-title">ЩО ЦЕ</h3>
+                    <p>Це не просто сайт зі статтями: тут можна досліджувати версії Windows, порівнювати їхні характеристики, дивитись графіки й додавати власні дані. Усе, що показано на сторінках, береться з бази даних.</p></section>
+                <section class="panel"><h3 class="panel-title">ДЛЯ КОГО</h3>
+                    <p>Для всіх, кому цікаво, як змінювались операційні системи: від Windows 1.0 у 1985 році до сучасних версій, серверних систем, мобільних платформ і бета-збірок.</p></section>
+            </div>
+
+            <section class="panel panel-wide"><h3 class="panel-title">МОЖЛИВОСТІ</h3>
+                <div class="feat-grid">
+                    <a class="feat" href="catalog.html"><b>Каталог</b><span>Пошук, фільтри, сортування й детальні картки.</span></a>
+                    <a class="feat" href="compare.html"><b>Порівняння</b><span>До 4 версій, відмінності підсвічені, експорт у PDF та XLSX.</span></a>
+                    <a class="feat" href="timeline.html"><b>Історія</b><span>Інтерактивна хронологія з 1985 року.</span></a>
+                    <a class="feat" href="analytics.html"><b>Аналітика</b><span>Графіки зростання вимог і розподіл версій.</span></a>
+                    <a class="feat" href="import.html"><b>Імпорт</b><span>CSV, JSON, XLSX із перевіркою даних.</span></a>
+                </div>
+            </section>
+
+            <div class="detail-cols">
+                <section class="panel"><h3 class="panel-title">ТЕХНОЛОГІЇ</h3>
+                    <ul class="px-list">
+                        <li>Сервер: Node.js і Express</li>
+                        <li>База даних: SQLite (sql.js)</li>
+                        <li>Клієнт: HTML, CSS і JavaScript без фреймворків</li>
+                        <li>Експорт: PDFKit та ExcelJS</li>
+                        <li>Шрифти: Press Start 2P і Handjet</li>
+                    </ul></section>
+                <section class="panel"><h3 class="panel-title">ПРО ДАНІ</h3>
+                    <p>Дані зібрані зі сторінок Вікіпедії та офіційних системних вимог Microsoft; джерело вказано на картці кожної версії. Для старих версій і бета-збірок числа в різних джерелах відрізняються, тому такі значення позначено приміткою. Якщо точних даних немає, показано «—», а не вигадані числа.</p></section>
+            </div>
+
+        </div>
+    </main>
+</div>
+
+<script src="js/main.js"></script>
+<script src="js/about.js"></script>
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Історія — Windows Evolution</title>
+
+    <!-- Піксельні шрифти підключені локально в css/style.css -->
+
+    <!-- Стилі -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+
+<body>
+
+<div class="scanlines"></div>
+
+<div class="app">
+
+    <!-- =================================
+         БОКОВЕ МЕНЮ
+    ================================== -->
+
+    <aside class="sidebar">
+
+        <a href="index.html" class="brand">
+
+            <div class="brand-icon">
+                W<span>.</span>
+            </div>
+
+            <div class="brand-text">
+                <span>WINDOWS</span>
+                <strong>EVOLUTION</strong>
+            </div>
+
+        </a>
+
+
+        <div class="sidebar-label">
+            <span class="pixel-square"></span>
+            MAIN MENU
+        </div>
+
+
+        <nav class="navigation">
+
+            <a href="index.html" class="nav-item">
+                <span class="nav-icon">⌂</span>
+                <span>Головна</span>
+                <span class="nav-marker"></span>
+            </a>
+
+            <a href="catalog.html" class="nav-item">
+                <span class="nav-icon">▦</span>
+                <span>Каталог Windows</span>
+            </a>
+
+            <a href="compare.html" class="nav-item">
+                <span class="nav-icon">⇄</span>
+                <span>Порівняння</span>
+            </a>
+
+            <a href="timeline.html" class="nav-item active">
+                <span class="nav-icon">◷</span>
+                <span>Історія Windows</span>
+            </a>
+
+            <a href="knowledge.html" class="nav-item">
+                <span class="nav-icon">▤</span>
+                <span>Енциклопедія</span>
+            </a>
+
+            <a href="features.html" class="nav-item">
+                <span class="nav-icon">▧</span>
+                <span>Матриця функцій</span>
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-label tools-label">
+            <span class="pixel-square purple-square"></span>
+            SYSTEM TOOLS
+        </div>
+
+
+        <nav class="navigation">
+
+            <a href="analytics.html" class="nav-item">
+                <span class="nav-icon">▥</span>
+                <span>Аналітика</span>
+            </a>
+
+            <a href="import.html" class="nav-item">
+                <span class="nav-icon">⇧</span>
+                <span>Імпорт даних</span>
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <a href="about.html" class="nav-item">
+                <span class="nav-icon">ⓘ</span>
+                <span>Про проєкт</span>
+            </a>
+
+            <div class="sidebar-version">
+
+                <div class="online-indicator"></div>
+
+                <span>WINDOWS EVOLUTION</span>
+
+                <span class="version">V1.0</span>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =================================
+         ОСНОВНИЙ КОНТЕНТ
+    ================================== -->
+
+    <main class="main-content">
+
+
+        <!-- Верхня панель -->
+
+        <header class="topbar">
+
+            <div class="breadcrumbs">
+                <span>WINDOWS EVOLUTION</span>
+                <span class="breadcrumb-symbol">/</span>
+                <a href="catalog.html">КАТАЛОГ</a>
+                <span class="breadcrumb-symbol">/</span>
+                <strong>ІСТОРІЯ</strong>
+            </div>
+
+            <div class="system-status">
+
+                <span class="online-indicator"></span>
+
+                SYSTEM ONLINE
+
+            </div>
+
+        </header>
+
+
+        <div class="page-content">
+
+            <div class="page-head">
+                <span class="eyebrow">TIME MACHINE</span>
+                <h1 class="page-title">ІСТОРІЯ WINDOWS</h1>
+                <p class="page-lead">Хронологія від 1985 року. Обирай, що показувати, перестрибуй між десятиліттями та відкривай подробиці кожної події.</p>
+            </div>
+
+            <div class="toolbar">
+                <div class="field"><span>ЩО ПОКАЗАТИ</span>
+                    <div class="toggles" id="cats">
+                        <label class="check"><input type="checkbox" value="desktop" checked><span>ПК</span></label>
+                        <label class="check"><input type="checkbox" value="server"><span>Сервери</span></label>
+                        <label class="check"><input type="checkbox" value="device"><span>Пристрої</span></label>
+                        <label class="check"><input type="checkbox" value="beta"><span>Бета й кодові назви</span></label>
+                    </div>
+                </div>
+                <div class="field"><span>ПЕРЕЙТИ ДО</span>
+                    <div class="toggles" id="decades"></div>
+                </div>
+            </div>
+
+            <div id="count" class="result-count" aria-live="polite">Завантаження…</div>
+            <div id="message" class="os-message" hidden></div>
+            <ol id="timeline" class="timeline"></ol>
+
+        </div>
+    </main>
+</div>
+
+<script src="js/main.js"></script>
+<script src="js/images.js"></script>
+<script src="js/timeline.js"></script>
+</body>
+</html>

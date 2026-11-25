@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Аналітика — Windows Evolution</title>
+
+    <!-- Піксельні шрифти підключені локально в css/style.css -->
+
+    <!-- Стилі -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+
+<body>
+
+<div class="scanlines"></div>
+
+<div class="app">
+
+    <!-- =================================
+         БОКОВЕ МЕНЮ
+    ================================== -->
+
+    <aside class="sidebar">
+
+        <a href="index.html" class="brand">
+
+            <div class="brand-icon">
+                W<span>.</span>
+            </div>
+
+            <div class="brand-text">
+                <span>WINDOWS</span>
+                <strong>EVOLUTION</strong>
+            </div>
+
+        </a>
+
+
+        <div class="sidebar-label">
+            <span class="pixel-square"></span>
+            MAIN MENU
+        </div>
+
+
+        <nav class="navigation">
+
+            <a href="index.html" class="nav-item">
+                <span class="nav-icon">⌂</span>
+                <span>Головна</span>
+                <span class="nav-marker"></span>
+            </a>
+
+            <a href="catalog.html" class="nav-item">
+                <span class="nav-icon">▦</span>
+                <span>Каталог Windows</span>
+            </a>
+
+            <a href="compare.html" class="nav-item">
+                <span class="nav-icon">⇄</span>
+                <span>Порівняння</span>
+            </a>
+
+            <a href="timeline.html" class="nav-item">
+                <span class="nav-icon">◷</span>
+                <span>Історія Windows</span>
+            </a>
+
+            <a href="knowledge.html" class="nav-item">
+                <span class="nav-icon">▤</span>
+                <span>Енциклопедія</span>
+            </a>
+
+            <a href="features.html" class="nav-item">
+                <span class="nav-icon">▧</span>
+                <span>Матриця функцій</span>
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-label tools-label">
+            <span class="pixel-square purple-square"></span>
+            SYSTEM TOOLS
+        </div>
+
+
+        <nav class="navigation">
+
+            <a href="analytics.html" class="nav-item active">
+                <span class="nav-icon">▥</span>
+                <span>Аналітика</span>
+            </a>
+
+            <a href="import.html" class="nav-item">
+                <span class="nav-icon">⇧</span>
+                <span>Імпорт даних</span>
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <a href="about.html" class="nav-item">
+                <span class="nav-icon">ⓘ</span>
+                <span>Про проєкт</span>
+            </a>
+
+            <div class="sidebar-version">
+
+                <div class="online-indicator"></div>
+
+                <span>WINDOWS EVOLUTION</span>
+
+                <span class="version">V1.0</span>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =================================
+         ОСНОВНИЙ КОНТЕНТ
+    ================================== -->
+
+    <main class="main-content">
+
+
+        <!-- Верхня панель -->
+
+        <header class="topbar">
+
+            <div class="breadcrumbs">
+                <span>WINDOWS EVOLUTION</span>
+                <span class="breadcrumb-symbol">/</span>
+                <a href="catalog.html">КАТАЛОГ</a>
+                <span class="breadcrumb-symbol">/</span>
+                <strong>АНАЛІТИКА</strong>
+            </div>
+
+            <div class="system-status">
+
+                <span class="online-indicator"></span>
+
+                SYSTEM ONLINE
+
+            </div>
+
+        </header>
+
+
+        <div class="page-content">
+
+            <div class="page-head">
+                <span class="eyebrow">DATA VISUALIZATION</span>
+                <h1 class="page-title">АНАЛІТИКА</h1>
+                <p class="page-lead">Графіки побудовані з даних бази. Дивись, як із роками росли вимоги до заліза.</p>
+            </div>
+
+            <div id="message" class="os-message" hidden></div>
+            <div id="kpis" class="kpis"></div>
+
+            <section class="panel chart-panel">
+                <h3 class="panel-title">СИСТЕМНІ ВИМОГИ ЗА РОКАМИ ВИХОДУ</h3>
+                <div class="toolbar toolbar-flat">
+                    <label class="field"><span>ПОКАЗНИК</span>
+                        <select id="metric">
+                            <option value="min_ram_mb">Мінімум RAM</option>
+                            <option value="rec_ram_mb">Рекомендовано RAM</option>
+                            <option value="min_disk_mb">Мінімум диска</option>
+                            <option value="rec_disk_mb">Рекомендовано диска</option>
+                            <option value="min_cpu_mhz">Мінімальна частота CPU</option>
+                        </select>
+                    </label>
+                    <label class="field"><span>КАТЕГОРІЯ</span>
+                        <select id="cat">
+                            <option value="desktop">ПК</option>
+                            <option value="server">Сервери</option>
+                            <option value="device">Пристрої</option>
+                            <option value="all">Усі (без бет)</option>
+                        </select>
+                    </label>
+                </div>
+                <div id="chart" class="chart" role="img" aria-label="Стовпчиковий графік системних вимог"></div>
+                <div id="info" class="chart-info" aria-live="polite">Наведи курсор на стовпчик.</div>
+                <div class="legend"><span><i style="background:#f4b6d8"></i>MS-DOS</span><span><i style="background:#ff83c8"></i>NT</span><span><i style="background:#9bd1ff"></i>CE</span><span class="muted">Шкала логарифмічна</span></div>
+            </section>
+
+            <div class="detail-cols">
+                <section class="panel"><h3 class="panel-title">ЗА КАТЕГОРІЯМИ</h3><div id="byCategory" class="hbars"></div></section>
+                <section class="panel"><h3 class="panel-title">ЗА ЛІНІЄЮ (БЕЗ БЕТ)</h3><div id="byLine" class="hbars"></div></section>
+                <section class="panel"><h3 class="panel-title">ЗА СТАТУСОМ ПІДТРИМКИ</h3><div id="byStatus" class="hbars"></div></section>
+            </div>
+
+            <section class="panel chart-panel">
+                <h3 class="panel-title">СКІЛЬКИ ВЕРСІЙ ВИЙШЛО ЗА ДЕСЯТИЛІТТЯ</h3>
+                <div id="decades" class="chart chart-small" role="img" aria-label="Кількість версій за десятиліттями"></div>
+            </section>
+
+        </div>
+    </main>
+</div>
+
+<script src="js/main.js"></script>
+<script src="js/analytics.js"></script>
+</body>
+</html>
